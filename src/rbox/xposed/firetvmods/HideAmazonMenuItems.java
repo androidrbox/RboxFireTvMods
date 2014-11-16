@@ -35,7 +35,7 @@ public class HideAmazonMenuItems implements IXposedHookZygoteInit, IXposedHookIn
 	public void initZygote(StartupParam startupParam) throws Throwable
 	{
 		MODULE_PATH = startupParam.modulePath;
-		prefs = new XSharedPreferences("com.amazon.bueller.csapp", "com.amazon.bueller.csapp_preferences");
+		prefs = new XSharedPreferences("com.amazon.tv.csapp", "com.amazon.tv.csapp_preferences");
 	}
 
 	@Override
@@ -67,7 +67,7 @@ public class HideAmazonMenuItems implements IXposedHookZygoteInit, IXposedHookIn
 					Object helpItem = settingsItems.get(5);
 					settingsItems.add(0, XposedHelpers.newInstance(SettingsItem,
 					        0,
-					        "MENU ITEMS",
+					        "Menu Items",
 					        "Select what menu items should be visible on the home screen.",
 					        DRAWABLE_MENU_ITEMS,
 					        XposedHelpers.getObjectField(helpItem, "mIntent"),
@@ -99,7 +99,7 @@ public class HideAmazonMenuItems implements IXposedHookZygoteInit, IXposedHookIn
 			});
 		}
 
-		if (lpparam.packageName.equals("com.amazon.bueller.csapp"))
+		if (lpparam.packageName.equals("com.amazon.tv.csapp"))
 		{
 			// Menu items that can be removed
 			@SuppressWarnings("serial")
@@ -120,7 +120,7 @@ public class HideAmazonMenuItems implements IXposedHookZygoteInit, IXposedHookIn
 				}
 			};
 
-			XposedHelpers.findAndHookMethod("com.amazon.bueller.csapp.CSAppActivity", lpparam.classLoader, "onCreate", Bundle.class, new XC_MethodHook() {
+			XposedHelpers.findAndHookMethod("com.amazon.tv.csapp.CSAppActivity", lpparam.classLoader, "onCreate", Bundle.class, new XC_MethodHook() {
 				@Override
 				protected void afterHookedMethod(MethodHookParam param) throws Throwable
 				{
