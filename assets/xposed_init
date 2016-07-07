@@ -3,3 +3,4 @@ rbox.xposed.firetvmods.HideAmazonMenuItems
 rbox.xposed.firetvmods.HideLauncherAds
 rbox.xposed.firetvmods.KeyBindings
 rbox.xposed.firetvmods.RecentsOnMenuLong
+rbox.xposed.firetvmods.CreateMenu
