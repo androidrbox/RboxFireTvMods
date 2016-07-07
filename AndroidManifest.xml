@@ -1,11 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="rbox.xposed.firetvmods"
-    android:versionCode="5"
-    android:versionName="1.4">
+    android:versionCode="6"
+    android:versionName="2.0-alpha">
 
     <uses-sdk
-        android:minSdkVersion="17"
-        android:targetSdkVersion="17"/>
+        android:minSdkVersion="22"
+        android:targetSdkVersion="22"/>
 
     <application
         android:allowBackup="true"
@@ -17,7 +17,7 @@
             android:value="true"/>
         <meta-data
             android:name="xposedminversion"
-            android:value="54+"/>
+            android:value="85+"/>
         <meta-data
             android:name="xposeddescription"
             android:value="Tweaks for Amazon Fire TV by rbox"/>
