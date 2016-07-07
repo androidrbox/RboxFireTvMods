@@ -6,3 +6,4 @@ rbox.xposed.firetvmods.RecentsOnMenuLong
 rbox.xposed.firetvmods.DownloadProviderFix
 rbox.xposed.firetvmods.BlockOtaService
 rbox.xposed.firetvmods.WallpaperFix
+rbox.xposed.firetvmods.CreateMenu
